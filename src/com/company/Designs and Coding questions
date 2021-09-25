@@ -1,0 +1,123 @@
+Designs and Coding questions
+- [ ] Assume each number represents one alphabet from 1 to 26. Print the sequence to represent the           5 46 where 5 is the max occurrence and 46 is the sum
+- [ ] Find the number of square in a square matrix where each element should be prime
+- [ ] path exist check using hopped nodes
+- [ ] How to scale a system and how to handle multiple cuncurrent input request for a web service
+- [ ] Design payment transaction system
+- [ ] Performance improvement of a large site.
+- [ ] Issue with concurrent accessories vs locking
+- [ ] A web service is used by many teams. How do you release a new version? Sending emails or reminders to a mailing list of current user does not guarantee a full response. What do you do
+- [ ] Design a sub system(sub engine) for the auto complete feature for a phrase
+- [ ] How to build a scalable web crawling plateform
+- [ ] Design recommendation engine. - uml
+- [ ] Design commenting system which can support different type of clients let’s say Facebook zomato any type of client which can have their requirements. - uml Design subscription based sports website which can display scores, game status, history for any games hld and lld - uml
+- [ ] Horizontal scalable system to fetch data in minimum time
+- [ ] Cricket live score display system
+- [ ] Add display system board
+- [ ] Google map
+- [ ] Twitter
+- [ ] Tiny url
+- [ ] Inventory management
+- [ ] Browser Internals, performance, chat architecture, snake game design, carousel design etc 
+
+
+
+---------------
+Coding Questions Asked in Diff company to KR
+
+
+1. Time complexity for adding, removing and searching in Treeset O(log N), while for hashset and linkedhashset
+its O(1). Treeset whether using Comparator interface or Comparable interface, will always use tree for
+addition/deletion/search basis on the compare/compareTo function. So time complexity will be log n instead of n.
+2. Contract of equal and hashcode() method? Need of equal method? Within a bucket each element will have same hashcode but if key is different, linked list of different element will be created.
+3. Thread: Level of locking and where all we can apply those?
+4. How to create queue using stack
+5. find an element 46 in below 2*2 matrix in an efficient way
+4 6 8 13 19
+9 14 17 21 89
+34 39 46 51 55
+35 49 59 79 81
+42 48 56 67 91
+
+1. How hashing works
+2. There is a list say 10,20,40,5,25,9. How to check which of the two numbers having sum 45 using hashing.
+3. How to use 3 util classes by three other classes?
+4. A web service have 10 methods to call, how to optimise the call?
+5. We have a stream of input objects, how to sort them?
+6. There are 100 service provider with uptime 90. How many service provider to choose to get 99.9% uptime?
+7. Design a data structure to support push,pop,search and delete in O(1) time complexity
+8. largest contiguous{1,3,7} sub array sum 
+9. min cost of connecting rods 
+10. Print left view of a BT
+11. Given a binary tree check if it is BST or not.
+12. Implement LRU Cache 
+13. Given an array of integers with the property that arr[j] – arr[j-1] is either 1,0,-1 and a search value, provide an efficient search mechanism.
+14. Given an array of integers(duplicates allowed) return if it is a set of contiguous integers or not?
+Input: 5,2,3,6,4,4,6,6 Output: Yes (as it is from set of [2,3,4,5,6]) 
+15. Find minimum element is rotated sorted array. 
+16. Print the matrix in spiral mode
+17. One question was about city with tall buildings with varying height and if its gets flooded, calculate total water storage due to buildings height.
+18. Another one was in tree. Print all the leaf tree values alone. 
+
+
+-------------------
+
+* All the wrapper classes (Integer, Boolean, Float, Short, Long, Double and Character) are immutable in java. All wrapper classes implements Comparable interface
+
+* If we are depending on default natural sorting order (in treeSet) compulsory the object should be homogeneous and comparable otherwise will get RTE saying CCE. An object is said to be comparable if and only if corresponding class implements Comparable interface.
+
+- final variable : JVM takes these as a constant as they will not change after initiated . And when an inner class try to access them, compiler create a copy of that variable into the heap and create a synthetic field inside the inner class so even when the method execution is over it is accessible because the inner class has its own copy.
+
+- In Map, any class(String etc.) can serve as a key if and only if it overrides the equals() and hashCode() method.
+
+- How remove(key) method works in HashMap ?
+RemoveEntryForKey(key)
+indexFor(hash, default capacity) // where int hash = (key==null)?0:hash(key.hasCode()) and table is an array of Entry objects . indexFor method returns the bucket number, and using key and hashvalue we find the appropriate object to remove.
+Map.Entry is the static nested class that stores the key/value pair that forms one element of HashMap.
+Entry object stores in the bucket in the following way(hash,key,value,bucketindex)
+
+- How ConcurrentHashMap works internally in Java? Each bucket can be locked. So number of threads which can operate at a time is the number of buckets available. Only put and remove method need locking. Each bucket called segment here which is nothing but a set of entry objects
+
+- Static nested class
+For packaging convenience we use static class within outer class if only one class(I.e. outer class) need static class’s functionality. If we don’t know if static class need to access outer class instance variables, then make the inner class static and later decide on usability. Static nested class can be called within static main without initialising the outer class object.
+
+- If instance variable modification required within a fun, make fun as instance method else static method.
+
+
+* Factory
+* Singleton (Thread safe)
+*Builder-> why?
+* Proxy
+* Facade
+* Observable Pattern
+
+------------------------------
+
+Amazon interview question
+1) Kadane's Algorithm.
+2) Tree Traversal Related Questions.
+3) Sorting and Searching Algorithms.
+4) Shortest Path Problem. 
+
+
+
+How to maintain last second, last minute, and last hour click record, when you have real-time data? 
+
+
+Design Chess, make neat class diagram for each entity, explain relation between the entities, explain how the complete follow will take place i.e. which class/function will take the input, how that input is processed and what values will be returned.
+
+
+--------------------
+
+1. LinkedIN
+2. Indeed
+3. Careerealism
+4. Job-Hunt
+5. JobBait
+6. Careercloud
+7. GM4JH
+8. Personalbrandingblog
+9. Jibberjobber
+10. Neighbors-helping-neighbors
+￼
+
